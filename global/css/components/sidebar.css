@@ -1,0 +1,67 @@
+/* Sidebar basic styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  width: 60px;
+  height: 100vh;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+  z-index: 999;
+  transition: left 0.5s ease, opacity 0.5s ease; /* Slide and fade transition */
+}
+
+.logo-container {
+  margin-bottom: 10px;
+}
+
+#sidebar-logo {
+  height: 50px;
+  width: 50px;
+}
+.logo {
+  width: 35px;
+  height: 35px;
+}
+
+.nav-icons {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav-icons li {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  position: relative; /* Required for tooltip positioning */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-icons li:hover {
+  background-color: var(--black);
+  border-radius: 8px;
+}
+
+.nav-list.active {
+  background-color: var(--black);
+  border-radius: 8px;
+  img {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.nav-icons li:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.nav-icons li img {
+  width: 30px;
+  height: 30px;
+  transition: filter 0.3s ease;
+}

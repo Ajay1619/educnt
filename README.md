@@ -1,1 +1,1 @@
-# educnt
+# EDUCNT-svcet-faculty

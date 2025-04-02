@@ -1,0 +1,110 @@
+/* Toast Container */
+#toast-container {
+  position: fixed;
+  top: 80px; /* Change to bottom: 20px; for bottom-right */
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Toast Styles */
+.toast {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  /* //animation: fadeIn 0.5s ease-in;
+  will-change: opacity, transform; */
+}
+
+.toast .toast-message {
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.toast-message {
+  margin-left: 5%;
+}
+.toast-close {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.toast-close:hover {
+  color: red;
+}
+
+.toast-dismiss {
+  animation: fadeOut 0.3s ease-in-out;
+}
+/* Toast Success */
+.toast-success {
+  background-color: var(--success);
+  color: var(--success-text);
+}
+
+/* Toast Error */
+.toast-error {
+  background-color: var(--error);
+  color: var(--error-text);
+}
+
+/* Toast Warning */
+.toast-warning {
+  background-color: var(--warning);
+  color: var(--warning-text);
+}
+
+/* Toast Info */
+.toast-info {
+  background-color: var(--info);
+  color: var(--info-text);
+}
+
+/* Toast Loader */
+.toast-loader {
+  height: 5px; /* Adjust height as needed */
+  background: var(--tertiary-gradient-dark);
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0; /* Position it at the bottom of the toast */
+  left: 0; /* Start from the right */
+  width: 100%; /* Start fully filled */
+}
+
+.toast-loader-success {
+  background: var(--success-dark);
+}
+
+.toast-loader-error {
+  background: var(--error-dark);
+}
+
+.toast-loader-warning {
+  background: var(--warning-dark);
+}
+
+.toast-loader-info {
+  background: var(--info-dark);
+}
+
+/* Loader Animation */
+.toast-loader-animation {
+  animation: loading 5s linear forwards; /* Duration matches toast display time */
+}
+
+/* Pause loader animation on hover */
+.toast:hover .toast-loader-animation {
+  animation-play-state: paused; /* Pauses the loader animation */
+}
+
+/* Animation */
+

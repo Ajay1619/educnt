@@ -1,0 +1,91 @@
+/* Alerts & Notifications Styles */
+.alert {
+  padding: 7px;
+  border-radius: 15px;
+  margin: 15px 0;
+  display: inline-flex; /* Change to inline-flex to size to content */
+  align-items: center;
+  justify-content: space-between;
+  color: var(--success-text);
+  width: auto; /* Allow the alert to size according to the content */
+  max-width: 100%; /* Ensure it doesn't overflow its container */
+}
+
+/* Close Button for Alerts */
+.alert .close-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: var(--success-text);
+  cursor: pointer;
+}
+
+/* Success Alert */
+.alert-success {
+  background-color: var(--success);
+  color: var(--success-text);
+  font-weight: bold;
+}
+
+/* Error Alert */
+.alert-error {
+  background-color: var(--error);
+  color: var(--error-text);
+  font-weight: bold;
+}
+
+/* Warning Alert */
+.alert-warning {
+  background-color: var(--warning);
+  color: var(--warning-text);
+  font-weight: bold;
+}
+
+/* Info Alert */
+.alert-info {
+  background-color: var(--info);
+  color: var(--info-text);
+  font-weight: bold;
+}
+
+/* Dark Theme Specific Styles */
+[data-theme="dark"] .alert-success {
+  background-color: var(--success);
+  color: var(--success-text);
+  font-weight: bold;
+}
+
+[data-theme="dark"] .alert-error {
+  background-color: var(--error);
+  color: var(--success-text);
+  font-weight: bold;
+}
+
+[data-theme="dark"] .alert-warning {
+  background-color: var(--warning);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .alert-info {
+  background-color: var(--info);
+  color: var(--success-text);
+  font-weight: bold;
+}
+
+/* Alert Variations */
+.alert-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.alert-dismissible {
+  position: relative;
+  padding-right: 40px;
+}
+
+.alert-dismissible .close-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}

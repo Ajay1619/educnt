@@ -1,0 +1,25 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: var(--gray-light);
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: var(--gray-light);
+}
+
+.breadcrumb .active {
+  color: var(--white);
+  pointer-events: none; /* Disable link for active page */
+}

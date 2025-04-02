@@ -1,0 +1,101 @@
+.container {
+  width: 100%;
+  padding: 0 0px;
+}
+
+.profile-bg {
+  padding: 0;
+}
+.svg-background {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.svg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-top: -60px; /* Move up over the SVG background */
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--portal-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+}
+
+/* .faculty-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--portal-color);
+  overflow: hidden;
+} */
+
+.faculty-avatar-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--portal-color);
+  object-fit: cover;
+}
+.name-designation {
+  margin-left: 20px;
+}
+
+.profile-title {
+  font-size: 20px;
+  color: #555;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  position: relative; /* To position the vertical line */
+}
+
+.profile-title::before {
+  content: "";
+  position: absolute;
+  left: -10px; /* Adjust as per spacing needs */
+  top: 0;
+  width: 5px; /* Width of the vertical line */
+  height: 100%; /* Full height of the h3 */
+  background-color: var(--portal-color); /* Line color */
+}
+
+.profile-section {
+  padding: 20px 0;
+  text-align: left;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-light);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-top: 5px;
+  transition: color 0.3s ease;
+}
+.browse-text{
+  cursor: pointer;
+
+}

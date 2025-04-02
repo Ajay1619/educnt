@@ -1,0 +1,83 @@
+/* Notification bar styles */
+.notification-bar {
+  display: block;
+  position: fixed;
+  top: 60px; /* Adjust top position to be below the top bar */
+  right: -300px; /* Initially hidden outside the viewport */
+  width: 300px;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: right 0.4s ease, opacity 0.4s ease;
+  opacity: 0; /* Hidden by default with fade effect */
+  pointer-events: none; /* Disable pointer events when closed */
+}
+
+/* Notification bar when active */
+.notification-bar.active {
+  right: 0;
+  opacity: 1; /* Fully visible */
+  pointer-events: all; /* Enable pointer events when opened */
+}
+
+/* Notification bar header */
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--black);
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.notification-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--white);
+}
+
+/* Close button */
+.close-btn {
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--white);
+}
+
+/* Notification list styles */
+.notification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.notification-title {
+  font-weight: bold;
+  display: block;
+}
+
+.notification-subject {
+  color: #555;
+  font-size: 14px;
+}
+
+.notification-list li {
+  padding: 10px;
+  margin: 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect on list items */
+.notification-list li:hover {
+  background-color: var(--background-light); /* Light hover effect */
+}
+
+/* Slide out and fade-out effect */
+.notification-bar.inactive {
+  right: -300px; /* Slide out to the right */
+  opacity: 0; /* Fade-out effect */
+  pointer-events: none; /* Disable pointer events */
+}

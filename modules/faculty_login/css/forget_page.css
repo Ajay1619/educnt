@@ -1,0 +1,327 @@
+.forgot-password-card {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--black);
+    text-align: center;
+    width: 350px;
+    z-index: 999;
+    position: relative;
+}
+
+.forgot-password-card h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.forgot-password-card p {
+    font-size: 14px;
+    color: var(--grey-dark);
+    margin-bottom: 25px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: var(--grey-light);
+    margin-bottom: 20px;
+    font-size: 16px;
+    color:var(--text-color);
+    text-align: center;
+}
+
+.input-field::placeholder {
+    color: var(--text-light);
+}
+
+.otp-btn {
+    width: 100%;
+    padding: 12px;
+    background-color:var(--secondary);
+    color: var(--black);
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.otp-btn:hover {
+    background-color: var(--portal-dark-color);
+    color: var(--white);
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--black);
+    text-decoration: none;
+}
+
+
+
+/* 4K and Larger Screens */
+@media (min-width: 2560px) {
+    .forgot-password-card {
+        width: 100%;
+        min-width: 800px;
+        max-width: 1000px;
+        padding: 50px;
+        height: 550px;
+    }
+
+    .forgot-password-card h2 {
+        font-size: 48px;
+    }
+
+    .forgot-password-card input {
+        font-size: 30px;
+        border: 1px solid var(--black);
+    }
+    .forgot-password-card input::placeholder{
+        color: var(--grey-light);
+    }
+
+    .forgot-password-card a {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    .login-button {
+        font-size: 38px;
+        margin-top: 30px;
+    }
+    
+    .svg-image-top-left {
+        width: 90%;
+        max-width: 900px;
+    }
+
+    .svg-image-bottom-right {
+        width: 40%;
+        max-width: 700px;
+    }
+}
+  
+/* Laptop L */
+@media (min-width: 1440px) and (max-width: 2559px) {
+    
+    .forgot-password-card {
+        width: 100%;
+        max-width: 500px;
+        padding: 50px;
+    }
+
+    .forgot-password-card h2 {
+        font-size: 38px;
+    }
+
+    .forgot-password-card input {
+        font-size: 25px;
+        border: 1px solid var(--black);
+    }
+    .forgot-password-card input::placeholder{
+        color: var(--grey-light);
+    }
+
+    .forgot-password-card a {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .login-button {
+        font-size: 28px;
+        margin-top: 30px;
+    }
+    
+    .svg-image-top-left {
+        max-width: 550px;
+    }
+
+    .svg-image-bottom-right {
+        max-width: 400px;
+    }
+
+    
+}
+  
+/* Laptop */
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    .forgot-password-card {
+        width: 100%;
+        max-width:400px;
+        padding: 30px;
+    }
+
+    .forgot-password-card h2 {
+        font-size: 28px;
+    }
+
+    .forgot-password-card input {
+        font-size: 20px;
+    }
+    .forgot-password-card input::placeholder{
+        color: var(--grey-light);
+    }
+
+    .forgot-password-card a {
+        font-size: 20px;
+    }
+
+    .login-button {
+        font-size: 22px;
+    }
+    
+    .svg-image-top-left {
+        max-width: 400px;
+    }
+
+    .svg-image-bottom-right {
+        max-width: 350px;
+    }
+
+}
+  
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    .forgot-password-card {
+        width: 100%;
+        max-width:380px;
+        padding: 30px;
+    }
+
+    .forgot-password-card h2 {
+        font-size: 24px;
+    }
+
+    .forgot-password-card input {
+        font-size: 18px;
+    }
+    .forgot-password-card input::placeholder{
+        color: var(--grey-light);
+    }
+
+    .forgot-password-card a {
+        font-size: 18px;
+    }
+
+    .login-button {
+        font-size: 20px;
+    }
+    
+    .svg-image-top-left {
+        max-width: 380px;
+    }
+
+    .svg-image-bottom-right {
+        max-width: 330px;
+    }
+
+}
+  
+/* Mobile L */
+@media (min-width: 425px) and (max-width: 767px) {
+    .forgot-password-card {
+        width: 100%;
+        max-width:350px;
+        padding: 20px;
+    }
+
+    .forgot-password-card h2 {
+        font-size: 24px;
+    }
+
+    .forgot-password-card input {
+        font-size: 20px;
+    }
+    .forgot-password-card input::placeholder{
+        color: var(--grey-light);
+    }
+
+    .forgot-password-card a {
+        font-size: 20px;
+    }
+
+    .login-button {
+        font-size: 20px;
+    }
+    
+    .svg-image-top-left {
+        max-width: 280px;
+    }
+
+    .svg-image-bottom-right {
+        max-width: 250px;
+    }
+}
+
+/* Mobile M */
+@media (min-width: 375px) and (max-width: 424px) {
+    .forgot-password-card {
+        padding: 15px;
+        max-width: 300px;
+    }
+
+    .forgot-password-card h2 {
+        font-size: 20px;
+    }
+
+    .forgot-password-card input {
+        font-size: 18px;
+    }
+
+    .forgot-password-card a {
+        font-size: 18px;
+    }
+
+    .login-button {
+        font-size: 18px;
+    }
+
+    .svg-image-top-left {
+        max-width: 250px;
+    }
+
+    .svg-image-bottom-right {
+        max-width: 200px;
+    }
+}
+  
+/* Mobile S */
+@media (max-width: 374px) {
+    .forgot-password-card {
+        padding: 20px;
+        max-width: 280px;
+    }
+
+    .forgot-password-card h2 {
+        font-size: 25px;
+    }
+
+    .forgot-password-card input {
+        font-size: 18px;
+    }
+
+    .forgot-password-card a {
+        font-size: 18px;
+    }
+
+    .login-button {
+        font-size: 18px;
+    }
+    
+
+    .svg-image-top-left {
+        max-width: 250px;
+    }
+
+    .svg-image-bottom-right {
+        max-width: 240px;
+    }
+}

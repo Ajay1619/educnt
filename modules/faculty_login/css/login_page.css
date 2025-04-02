@@ -1,0 +1,345 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--portal-color);
+  background-image: url("../../../global/images/svgs/pngegg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.login-card {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: var(--background-dark);
+  text-align: center;
+  width: 100%; /* Use percentage width for responsiveness */
+  z-index: 999;
+  position: relative;
+}
+
+.svg-image-top-left,
+.svg-image-bottom-right {
+  position: absolute;
+  z-index: 0;
+}
+
+.svg-image-top-left {
+  top: 0;
+  left: 0;
+  width: 100%; /* Adjust width for responsiveness */
+  height: auto;
+  z-index: 0;
+}
+
+.svg-image-bottom-right {
+  bottom: 0;
+  right: 0;
+  width: 100%; /* Adjust width for responsiveness */
+  height: auto;
+  z-index: 0;
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+  font-size: 34px;
+  color: var(--black);
+  text-align: start;
+  font-weight: bold;
+}
+
+.login-card a {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--black);
+  text-align: start;
+  font-weight: bold;
+  display: block;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 25px;
+  border: 1px solid var(--black);
+  font-size: 16px;
+}
+
+.login-card input::placeholder {
+  color: var(--grey-light);
+}
+
+.login-button {
+  width: 100%;
+  background-color: var(--portal-color);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-button:hover {
+  background-color: var(--portal-dark-color);
+}
+
+/* 4K and Larger Screens */
+@media (min-width: 2560px) {
+  .login-card {
+    width: 100%;
+    min-width: 800px;
+    max-width: 1000px;
+    padding: 50px;
+    height: 550px;
+  }
+
+  .login-card h2 {
+    font-size: 48px;
+  }
+
+  .login-card input {
+    font-size: 30px;
+    border: 1px solid var(--black);
+  }
+  .login-card input::placeholder {
+    color: var(--grey-light);
+  }
+
+  .login-card a {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  .login-button {
+    font-size: 38px;
+    margin-top: 30px;
+  }
+
+  .svg-image-top-left {
+    width: 90%;
+    max-width: 900px;
+  }
+
+  .svg-image-bottom-right {
+    width: 40%;
+    max-width: 700px;
+  }
+}
+
+/* Laptop L */
+@media (min-width: 1440px) and (max-width: 2559px) {
+  .login-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 50px;
+  }
+
+  .login-card h2 {
+    font-size: 38px;
+  }
+
+  .login-card input {
+    font-size: 25px;
+    border: 1px solid var(--black);
+  }
+  .login-card input::placeholder {
+    color: var(--grey-light);
+  }
+
+  .login-card a {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  .login-button {
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  .svg-image-top-left {
+    max-width: 550px;
+  }
+
+  .svg-image-bottom-right {
+    max-width: 400px;
+  }
+}
+
+/* Laptop */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+  }
+
+  .login-card h2 {
+    font-size: 28px;
+  }
+
+  .login-card input {
+    font-size: 20px;
+  }
+  .login-card input::placeholder {
+    color: var(--grey-light);
+  }
+
+  .login-card a {
+    font-size: 20px;
+  }
+
+  .login-button {
+    font-size: 22px;
+  }
+
+  .svg-image-top-left {
+    max-width: 400px;
+  }
+
+  .svg-image-bottom-right {
+    max-width: 350px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .login-card {
+    width: 100%;
+    max-width: 380px;
+    padding: 30px;
+  }
+
+  .login-card h2 {
+    font-size: 24px;
+  }
+
+  .login-card input {
+    font-size: 18px;
+  }
+  .login-card input::placeholder {
+    color: var(--grey-light);
+  }
+
+  .login-card a {
+    font-size: 18px;
+  }
+
+  .login-button {
+    font-size: 20px;
+  }
+
+  .svg-image-top-left {
+    max-width: 380px;
+  }
+
+  .svg-image-bottom-right {
+    max-width: 330px;
+  }
+}
+
+/* Mobile L */
+@media (min-width: 425px) and (max-width: 767px) {
+  .login-card {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  .login-card h2 {
+    font-size: 24px;
+  }
+
+  .login-card input {
+    font-size: 20px;
+  }
+  .login-card input::placeholder {
+    color: var(--grey-light);
+  }
+
+  .login-card a {
+    font-size: 20px;
+  }
+
+  .login-button {
+    font-size: 20px;
+  }
+
+  .svg-image-top-left {
+    max-width: 280px;
+  }
+
+  .svg-image-bottom-right {
+    max-width: 250px;
+  }
+}
+
+/* Mobile M */
+@media (min-width: 375px) and (max-width: 424px) {
+  .login-card {
+    padding: 15px;
+    max-width: 300px;
+  }
+
+  .login-card h2 {
+    font-size: 20px;
+  }
+
+  .login-card input {
+    font-size: 18px;
+  }
+
+  .login-card a {
+    font-size: 18px;
+  }
+
+  .login-button {
+    font-size: 18px;
+  }
+
+  .svg-image-top-left {
+    max-width: 250px;
+  }
+
+  .svg-image-bottom-right {
+    max-width: 200px;
+  }
+}
+
+/* Mobile S */
+@media (max-width: 374px) {
+  .login-card {
+    padding: 20px;
+    max-width: 280px;
+  }
+
+  .login-card h2 {
+    font-size: 25px;
+  }
+
+  .login-card input {
+    font-size: 18px;
+  }
+
+  .login-card a {
+    font-size: 18px;
+  }
+
+  .login-button {
+    font-size: 18px;
+  }
+
+  .svg-image-top-left {
+    max-width: 250px;
+  }
+
+  .svg-image-bottom-right {
+    max-width: 240px;
+  }
+}

@@ -1,0 +1,332 @@
+/* Base Button Styles */
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Button Sizes */
+button.small {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+button.medium {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+button.large {
+  padding: 15px 30px;
+  font-size: 16px;
+}
+
+/* Success Button */
+button.btn-success {
+  background-color: var(--success-dark);
+  color: var(--white);
+}
+
+button.btn-success:hover {
+  filter: brightness(1.1);
+}
+
+button.btn-success:active {
+  background-color: lighten(var(--success-dark), 10%);
+}
+button.btn-warning {
+  background-color: var(--warning-dark);
+  color: var(--black);
+}
+
+button.btn-warning:hover {
+  filter: brightness(1.1);
+}
+
+button.btn-warning:active {
+  background-color: lighten(var(--warning-dark), 10%);
+}
+
+/* Error Button */
+button.btn-error {
+  background-color: var(--error-dark);
+  color: var(--white);
+}
+
+button.btn-error:hover {
+  filter: brightness(1.1);
+}
+
+button.btn-error:active {
+  background-color: lighten(var(--error-dark), 10%);
+}
+
+/* Primary Button */
+button.primary {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+button.primary:hover {
+  filter: brightness(1.1);
+}
+
+button.primary:active {
+  background-color: lighten(var(--primary), 10%);
+}
+
+/* Secondary Button */
+button.secondary {
+  background-color: var(--secondary-dark);
+  color: var(--text-light);
+}
+
+button.secondary:hover {
+  filter: brightness(1.1);
+}
+
+button.secondary:active {
+  background-color: lighten(var(--secondary), 10%);
+}
+
+/* Tertiary Button */
+button.tertiary {
+  background-color: var(--tertiary-dark);
+  color: var(--text-light);
+}
+
+button.black {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+button.tertiary:hover {
+  filter: brightness(1.1);
+}
+
+button.tertiary:active {
+  background-color: lighten(var(--tertiary), 10%);
+}
+
+/* Gradient Buttons */
+button.gradient-primary {
+  background: var(--primary-gradient);
+  color: var(--text-dark);
+}
+
+button.gradient-primary:hover {
+  filter: brightness(1.1);
+}
+
+button.gradient-primary:active {
+  background-color: lighten(var(--primary), 10%);
+}
+
+button.gradient-secondary {
+  background: var(--secondary-gradient);
+  color: var(--text-light);
+}
+
+button.gradient-secondary:hover {
+  filter: brightness(1.1);
+}
+
+button.gradient-secondary:active {
+  background-color: lighten(var(--secondary), 10%);
+}
+
+button.gradient-tertiary {
+  background: var(--tertiary-gradient);
+  color: var(--text-light);
+}
+
+button.gradient-tertiary:hover {
+  filter: brightness(1.1);
+}
+
+button.gradient-tertiary:active {
+  background-color: lighten(var(--primary), 10%);
+}
+
+button.outline {
+  background-color: transparent; /* No background */
+  color: var(--primary); /* Primary color for the text */
+  border: 2px solid var(--primary); /* Outline border */
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+button.outline:hover {
+  background-color: var(--white); /* Fill background on hover */
+  color: var(--black); /* Change text color to light */
+  border-color: var(--white); /* Keep border color same */
+}
+button.outline:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for focus */
+}
+button.outline_black {
+  background-color: transparent; /* No background */
+  color: var(--black); /* Primary color for the text */
+  border: 2px solid var(--black); /* Outline border */
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+button.outline_black:hover {
+  background-color: var(--gray-light); /* Fill background on hover */
+  color: var(--black); /* Change text color to light */
+  border-color: var(--black); /* Keep border color same */
+}
+
+/* Focus effect */
+button.outline_black:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for focus */
+}
+/* Icon Buttons */
+button.icon {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.icon .material-icons {
+  font-size: 20px;
+  color: var(--text-light);
+}
+
+button.icon:hover {
+  background-color: var(--primary);
+}
+
+button.icon.primary {
+  background-color: var(--primary);
+}
+
+button.icon.secondary {
+  background-color: var(--secondary);
+}
+
+button.icon.tertiary {
+  background-color: var(--tertiary);
+  color: var(--white);
+}
+
+/* Circle Buttons */
+button.circle {
+  border-radius: 50%;
+}
+
+button.circle.small {
+  width: 30px;
+  height: 30px;
+}
+
+button.circle.medium {
+  width: 50px;
+  height: 50px;
+}
+
+button.circle.large {
+  width: 70px;
+  height: 70px;
+}
+
+button.circle.primary {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+button.circle.secondary {
+  background-color: var(--secondary-dark);
+  color: var(--white);
+}
+
+button.circle.tertiary {
+  background-color: var(--tertiary-dark);
+  color: var(--white);
+}
+buttons.circle:hover {
+  filter: brightness(1.1);
+}
+buttons.circle:active {
+  background-color: lighten(var(--secondary), 10%);
+}
+
+/* Navigation Buttons */
+button.nav-next,
+button.nav-back {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+button.nav-next:hover,
+button.nav-back:hover {
+  background-color: #363636;
+}
+
+button.nav-next:active,
+button.nav-back:active {
+  background-color: lighten(var(--primary), 10%);
+}
+
+button.nav-next {
+  padding: 10px 20px;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button.nav-back {
+  padding: 10px 20px;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button.disabled {
+  background-color: var(--gray-light);
+  color: var(--white);
+  cursor: not-allowed;
+}
+button.disabled:hover {
+  background-color: var(--gray-light);
+  color: var(--white);
+  cursor: not-allowed;
+}
+
+.full-button {
+  width: 100%;
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

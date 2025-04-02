@@ -1,0 +1,118 @@
+.add-faculty {
+  cursor: pointer;
+}
+
+.committee-section {
+  padding: 20px 0;
+  text-align: left;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-light);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-top: 5px;
+  transition: color 0.3s ease;
+}
+
+.auth-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--portal-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.alert-popup {
+  height: auto;
+  width: 50%;
+}
+
+.popup-content.mentor-allotment-form {
+  overflow: hidden;
+}
+#swap-svg {
+  width: 30px;
+}
+.profile-pic-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--portal-color);
+  overflow: hidden;
+}
+
+.profile-pic-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.individual-faculty-list {
+  position: relative;
+  cursor: pointer;
+}
+
+.individual-faculty-list.active::before {
+  content: "";
+  position: absolute;
+  left: 0; /* Adjust as per spacing needs */
+  top: 0;
+  width: 5px; /* Width of the vertical line */
+  height: 100%; /* Full height of the card */
+  background-color: var(--portal-color); /* Line color */
+  border-top-left-radius: 10px; /* Match the card's top-left corner */
+  border-bottom-left-radius: 10px; /* Match the card's bottom-left corner */
+  z-index: 1; /* Ensure it appears above the background */
+}
+.individual-faculty-list.active {
+  transform: scale(1.02);
+}
+
+#faculty-mentor-student-list {
+  width: 100%;
+  background: var(--primary);
+  padding: 40px;
+  text-align: center;
+  border: 3px solid var(--portal-color);
+  border-radius: 20px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3),
+    0 8px 15px rgba(var(--portal-color-rgb), 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+#faculty-mentor-student-list:before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 120px;
+  height: 120px;
+  background: var(--portal-color);
+  border-radius: 50%;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+#faculty-mentor-student-list:after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 150px;
+  height: 150px;
+  background: var(--portal-color);
+  border-radius: 50%;
+  opacity: 0.15;
+  z-index: 0;
+}

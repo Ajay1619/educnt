@@ -1,0 +1,22 @@
+.faculty_admission_container {
+    padding: 30px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: var(--light-border);
+}

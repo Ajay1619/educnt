@@ -1,0 +1,74 @@
+:root {
+  /* Primary Colors */
+  --primary: #ffffff; /* Dark Blue-Gray */
+  --secondary: #c9c7c7;
+  --tertiary: #475160; /* Soft Blue-Gray */
+  /* --secondary: #88909a; Medium Gray */
+  /* Medium Gray */
+  /* Primary Dark Colors */
+  --primary-dark: #3a4452; /* Darker version of Dark Blue-Gray */
+  --secondary-dark: #9aa5b5; /* Darker version of Soft Blue-Gray */
+  --tertiary-dark: #777f88; /* Darker version of Medium Gray */
+  /* Hover Primary Colors */
+  --hover-primary: #f2fbfe; /* Lighter version for hover */
+  --hover-secondary: #c1c8d3; /* Lighter version for hover */
+  --hover-tertiary: #9ba1ab; /* Lighter version for hover */
+  /* Hover Primary Dark Colors */
+  --hover-primary-dark: #3b3c57; /* Darkened version of --primary-dark */
+  --hover-secondary-dark: #3d3d3d; /* Darkened version of --secondary-dark */
+  --hover-tertiary-dark: #6f6f6f; /* Darkened version of --tertiary-dark */
+  /* Gradient Colors */
+  --primary-gradient: linear-gradient(135deg, #ffffff 0%, #475160 100%);
+  --secondary-gradient: linear-gradient(135deg, #475160 0%, #9aa5b5 100%);
+  --tertiary-gradient: linear-gradient(135deg, #88909a 0%, #777f88 100%);
+  --primary-gradient-dark: linear-gradient(135deg, #3a4452 0%, #9aa5b5 100%);
+  --secondary-gradient-dark: linear-gradient(135deg, #9aa5b5 0%, #777f88 100%);
+  --tertiary-gradient-dark: linear-gradient(135deg, #777f88 0%, #88909a 100%);
+  /* Neutral Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --light-border: rgba(0, 0, 0, 0.1);
+  --darker-semi-transparent-bg-color: rgba(0, 0, 0, 0.4);
+  --gray-light: #cac8c8;
+  --gray-dark: #3b4147; /* Darker Gray */
+  --disabled:#F0F0F0;
+  /* Text Colors */
+  --text-color: #46505e;
+  --text-dark: #4f5764;
+  --text-light: #838d9a;
+  /* Background Colors */
+  --background-dark: #e1e6ec;
+  --background-light: #f5f7f9;
+  --background-footer: #f1f5f8;
+  /* Alerts */
+  --success: #d4edda;
+  --error: #f8d7da;
+  --warning: #fff3cd;
+  --info: #d1ecf1;
+
+  --success-dark: #4caf50;
+  --error-dark: #dc3545;
+  --warning-dark: #ffce36;
+  --info-dark: #017e95;
+
+  --success-light: #4caf50;
+  --error-light: #e55353;
+  --warning-light: #ffc107;
+  --info-light: #03a9f4;
+
+  /* Alerts Text*/
+  --success-text: #155724;
+  --error-text: #721c24;
+  --warning-text: #856404;
+  --info-text: #0c5460;
+
+  /* portal color */
+  --portal-color: #50c878;
+  --portal-dark-color: #004517;
+
+  /* navbar */
+  --semi-transparent-white: #ffffff6e; /* rgba(255, 255, 255, 0.43)*/
+
+  /* pdf button */
+  --pdf-button-color: #1d3557;
+}

@@ -1,0 +1,207 @@
+/* Sidebar when shown */
+.sidebar.show {
+  left: 0;
+  opacity: 1; /* Fade and slide in */
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger .bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+/* Transform hamburger to X when the sidebar is shown */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0; /* Hide the middle bar */
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.top-bar {
+  position: fixed; /* Makes the top bar fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensures it spans the full width */
+  background-color: var(--white);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  z-index: 999; /* Keeps the top bar above other content */
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  margin-right: 20px;
+  text-align: right;
+}
+
+.username {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.designation {
+  color: var(--text-light);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.notification {
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.notification-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.academic-calender {
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.academic-calender-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--portal-color);
+  overflow: hidden;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px 0;
+  z-index: 100;
+  width: 220px;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu li {
+  display: flex;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0;
+  transition: background-color 0.2s;
+}
+.dropdown-menu a:hover {
+  text-decoration: none;
+}
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-menu li img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown-menu li span {
+  flex-grow: 1;
+}
+
+#dropdown-arrow {
+  transition: transform 0.3s;
+}
+
+#dropdown-arrow.inverted {
+  transform: rotate(180deg); /* Invert the arrow upside down */
+}
+#change-password-popup .alert-popup {
+  overflow: hidden;
+  width: 50%;
+}
+/* Dropdown toggle area */
+#user-info,
+#avatar,
+#dropdown-arrow {
+  cursor: pointer;
+}
+#sem-manager-popup-list {
+  width: 50%;
+}
+#freeze-date-popup {
+  width: 50%;
+}
+#begin-date-popup {
+  width: 50%;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show hamburger menu in mobile */
+  }
+
+  .sidebar {
+    left: -200px; /* Hide sidebar by default */
+    top: 60px;
+  }
+
+  .sidebar.show {
+    width: 60px;
+    left: 0;
+    top: 60px;
+  }
+
+  /* Separate the extended-sidebar-card rule */
+  .extended-sidebar-card {
+    left: 20%;
+  }
+
+  .top-bar {
+    justify-content: space-between;
+  }
+}

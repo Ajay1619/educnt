@@ -1,0 +1,266 @@
+/* Base typography styles */
+/* Base Typography */
+
+@font-face {
+  font-family: "Axiforma";
+  src: url("../../fonts/Axiforma.ttf") format("truetype"),
+    url("../../fonts/Axiforma-SemiBold.woff") format("woff"),
+    url("../../fonts/Axiforma-SemiBold.woff2") format("woff2");
+}
+
+body {
+  cursor: auto;
+  font-size: 1rem; /* Base font size */
+  line-height: 1.5; /* Line height for readability */
+  color: var(--text-color); /* Default text color */
+  font-family: "Axiforma"; /* Default font family */
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem; /* 40px */
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem; /* 32px */
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px */
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.5rem; /* 24px */
+  line-height: 1.5;
+}
+
+h5 {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.6;
+}
+
+h6 {
+  font-size: 1rem; /* 16px */
+  line-height: 1.7;
+}
+
+/* Paragraphs */
+
+/* Links */
+a {
+  color: var(--primary-color); /* Default link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+}
+
+a:hover,
+a:focus {
+  color: darken(var(--primary-color), 10%); /* Darker color on hover/focus */
+  text-decoration: underline;
+}
+
+.underline {
+  text-decoration: underline;
+}
+/* Lists */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: disc; /* Bullets for unordered lists */
+  padding-left: 1.5rem; /* Indentation */
+}
+
+ol {
+  list-style-type: decimal; /* Numbers for ordered lists */
+  padding-left: 1.5rem; /* Indentation */
+}
+
+li {
+  margin-bottom: 0.5rem; /* Space between list items */
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 0;
+  padding: 0 1rem;
+  border-left: 4px solid var(--primary-color); /* Left border for emphasis */
+  font-style: italic;
+}
+
+/* Code */
+code {
+  font-family: "Courier New", Courier, monospace; /* Monospace font for code */
+  background-color: var(
+    --background-dark-color
+  ); /* Dark background for code blocks */
+  padding: 0.25rem; /* Padding */
+  border-radius: 4px; /* Rounded corners */
+}
+
+pre {
+  font-family: "Courier New", Courier, monospace; /* Monospace font for preformatted text */
+  background-color: var(
+    --background-dark-color
+  ); /* Dark background for code blocks */
+  padding: 1rem; /* Padding */
+  border-radius: 4px; /* Rounded corners */
+  overflow-x: auto; /* Horizontal scroll if content overflows */
+  white-space: pre-wrap; /* Preserve white spaces */
+  margin: 0;
+}
+
+/* Text Utilities */
+.text-center {
+  text-align: center; /* Center align text */
+}
+
+.text-right {
+  text-align: right; /* Right align text */
+}
+
+.text-left {
+  text-align: left; /* Left align text */
+}
+
+.text-uppercase {
+  text-transform: uppercase; /* Uppercase text */
+}
+
+.text-lowercase {
+  text-transform: lowercase; /* Lowercase text */
+}
+
+.text-capitalize {
+  text-transform: capitalize; /* Capitalize first letter of each word */
+}
+.text-italize {
+  font-style: italic;
+}
+
+/* Font Weights */
+.font-weight-normal {
+  font-weight: normal; /* Normal font weight */
+}
+
+.font-weight-bold {
+  font-weight: bold; /* Bold font weight */
+}
+
+/* Font Sizes */
+.text-xsm {
+  font-size: 0.7rem !important; /* Small text */
+}
+
+.text-sm {
+  font-size: 0.875rem !important; /* Small text */
+}
+
+.text-lg {
+  font-size: 1rem !important; /* Large text */
+}
+
+.text-xl {
+  font-size: 1.5rem !important; /* Extra-large text */
+}
+
+.text-xxl {
+  font-size: 2rem !important; /* Extra-extra-large text */
+}
+
+.text-color {
+  color: var(--text-color) !important;
+}
+
+.text-light {
+  color: var(--text-light) !important;
+}
+
+.text-dark {
+  color: var(--text-dark) !important;
+}
+.background-light-text {
+  color: var(--background-light) !important;
+}
+.primary-text {
+  color: var(--primary-color) !important;
+}
+
+.secondary-text {
+  color: var(--secondary-color) !important;
+}
+
+.tertiary-text {
+  color: var(--tertiary-color) !important;
+}
+
+.white-text {
+  color: var(--white) !important;
+}
+
+.black-text {
+  color: var(--black) !important;
+}
+
+.success-text {
+  color: var(--success-text) !important;
+}
+
+.error-text {
+  color: var(--error-text) !important;
+}
+
+.warning-text {
+  color: var(--warning-text) !important;
+}
+
+.info-text {
+  color: var(--info-text) !important;
+}
+
+.disabled-text {
+  color: var(--disabled) !important;
+}
+
+.disabled-bg {
+  background-color: var(--disabled) !important;
+}
+
+.success-background {
+  background-color: var(--success) !important;
+}
+
+.portal-background {
+  background-color: var(--portal-color) !important;
+}
+.error-background {
+  background-color: var(--error) !important;
+}
+
+.warning-background {
+  background-color: var(--warning) !important;
+}
+
+.info-background {
+  background-color: var(--info) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

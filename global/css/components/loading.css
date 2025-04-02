@@ -1,0 +1,80 @@
+:root {
+  --hue: 120;
+  --bg: hsl(var(--hue), 90%, 90%);
+  --fg: hsl(var(--hue), 90%, 10%);
+  --trans-dur: 0.3s;
+}
+#Loading {
+  position: fixed; /* Keeps the element fixed relative to the viewport */
+  top: 0;
+  left: 0;
+  background: var(--bg);
+  color: var(--fg);
+  height: 100vh; /* Covers the full height of the viewport */
+  width: 100%; /* Covers the full width of the viewport */
+  display: grid;
+  place-items: center; /* Centers content both vertically and horizontally */
+  z-index: 1000; /* Ensures it appears above other elements */
+}
+
+.pencil {
+  display: block;
+  width: 10em;
+  height: 10em;
+}
+.pencil__body1,
+.pencil__body2,
+.pencil__body3,
+.pencil__eraser,
+.pencil__eraser-skew,
+.pencil__point,
+.pencil__rotate,
+.pencil__stroke {
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.pencil__body1,
+.pencil__body2,
+.pencil__body3 {
+  transform: rotate(-90deg);
+}
+.pencil__body1 {
+  animation-name: pencilBody1;
+}
+.pencil__body2 {
+  animation-name: pencilBody2;
+}
+.pencil__body3 {
+  animation-name: pencilBody3;
+}
+.pencil__eraser {
+  animation-name: pencilEraser;
+  transform: rotate(-90deg) translate(49px, 0);
+}
+.pencil__eraser-skew {
+  animation-name: pencilEraserSkew;
+  animation-timing-function: ease-in-out;
+}
+.pencil__point {
+  animation-name: pencilPoint;
+  transform: rotate(-90deg) translate(49px, -30px);
+}
+.pencil__rotate {
+  animation-name: pencilRotate;
+}
+.pencil__stroke {
+  animation-name: pencilStroke;
+  transform: translate(100px, 100px) rotate(-113deg);
+}
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loading-text {
+  margin-top: 1em;
+  font-size: 1.5em;
+  animation: fadeIn 2s infinite;
+}
+

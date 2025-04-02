@@ -1,0 +1,20 @@
+  /* Align the image and name horizontally */
+  .faculty-info {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Adjust the space between the image and the name */
+  .faculty-info img {
+    margin-right: 10px;
+  }
+
+  /* Set a consistent height for table rows */
+  td, th {
+    padding: 10px;
+    vertical-align: middle;
+    
+  }
+  .profile_image{
+    align-items: center;
+  }

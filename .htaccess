@@ -1,0 +1,77 @@
+RewriteEngine On
+
+# Disable DirectoryIndex or set it to faculty_login.php
+DirectoryIndex modules/faculty_login/faculty_login.php
+
+
+# Avoid interference with index.php requests
+RewriteRule ^index/?$ modules/faculty_login/faculty_login.php [L]
+
+
+# Rewrite rule for faculty login
+RewriteRule ^faculty-login/?$ modules/faculty_login/faculty_login.php [L]
+
+# Rewrite rules for lesson plan
+RewriteRule ^faculty-lesson-plan/?$ modules/faculty_lesson_plan/faculty_lesson_plan.php [L]
+
+# Rewrite rule for faculty profile
+RewriteRule ^faculty-profile/?$ modules/faculty_profile/faculty_profile.php [L]
+
+# Rewrite rule for faculty academic calendar
+RewriteRule ^faculty-academic-calendar/?$ modules/faculty_academic_calendar/faculty_academic_calendar.php [L]
+
+# Rewrite rule for faculty achievements
+RewriteRule ^faculty-achievements/?$ modules/faculty_achievements/faculty_achievements.php [L]
+
+# Rewrite rule for faculty material upload
+RewriteRule ^faculty-material-upload/?$ modules/faculty_material_upload/faculty_material_upload.php [L]
+
+# Rewrite rule for faculty roles and responsibilities
+RewriteRule ^faculty-roles-responsibilities/?$ modules/faculty_roles_responsibilities/faculty_roles_responsibilities.php [L]
+
+# Rewrite rule for faculty stock inventory
+RewriteRule ^faculty-stock-inventory/?$ modules/faculty_stock_inventory/faculty_stock_inventory.php [L]
+
+# Rewrite rule for faculty student admission
+RewriteRule ^faculty-student-admission/?$ modules/faculty_student_admission/faculty_student_admission.php [L]
+
+# Rewrite rule for faculty student admission
+RewriteRule ^faculty-admission/?$ modules/faculty_admission/faculty_admission.php [L]
+
+# Rewrite rule for faculty student attendance
+RewriteRule ^faculty-student-attendance/?$ modules/faculty_student_attendance/faculty_student_attendance.php [L]
+
+# Rewrite rule for faculty student examination
+RewriteRule ^faculty-student-examination/?$ modules/faculty_student_examination/faculty_student_examination.php [L]
+# Rewrite rule for faculty student examination
+RewriteRule ^faculty-student-fees/?$ modules/faculty_student_fees/faculty_student_fees.php [L]
+
+# Rewrite rule for faculty time table
+RewriteRule ^faculty-class-schedule/?$ modules/faculty_class_schedule/faculty_class_schedule.php [L]
+
+# Rewrite rule for faculty time table
+RewriteRule ^faculty-classes/?$ modules/faculty_classes/faculty_classes.php [L]
+
+# Rewrite rule for faculty dashboards
+RewriteRule ^faculty-dashboard/?$ modules/dashboard/dashboard.php [L]
+
+# Rewrite rule for user access denied
+RewriteRule ^user-access-denied/?$ global/components/error/error_403.php [L]
+
+# Rewrite rule for user access denied
+RewriteRule ^unauthorized-access/?$ global/components/error/error_401.php [L]
+
+# Rewrite rule for user Notfound
+RewriteRule ^not-found/?$ global/components/error/error_404.php [L]
+
+# Handle trailing slash for directories if needed
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
+# Custom Error Pages
+# ErrorDocument 404 /error-pages/404.php
+# ErrorDocument 403 /error-pages/403.php
+# ErrorDocument 500 /error-pages/500.php
+# ErrorDocument 401 /error-pages/401.php
+# ErrorDocument 400 /error-pages/400.php

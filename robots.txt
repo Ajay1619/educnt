@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /ajax/
+Disallow: /assets/
+Disallow: /components/
+Disallow: /config/
+Disallow: /json/
+Allow: /
+Sitemap: http://localhost/rex/sitemap.xml

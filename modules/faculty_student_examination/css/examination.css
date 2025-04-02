@@ -1,0 +1,253 @@
+#examination_alert_pop{
+width: 90%;
+}
+  /* Badge */
+  .formal-attractive-badge {
+    background: linear-gradient(135deg, #6f42c1, #d63384);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  }
+  .value {
+    font-size: 1.2rem;
+    color: var(--portal-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+ #exam-des{
+    margin-top: 0px;
+ }
+  .card-header{
+    margin-top: 20px;
+  }
+  #subject_allotment_card{
+  padding: 20px; 
+  }
+  #subject-accordion{
+    overflow: scroll;
+  }
+  #exam-allotment-accordion{
+    padding: 10px;
+  }
+
+
+  #subject-accordion .table {
+    width: 100%;
+    border: 1px solid #555;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 30px 0;
+    font-size: 14px;
+    color: #333;
+    background-color: #fafafa;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#subject-accordion .table th,
+#subject-accordion .table td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 20px;
+}
+
+#subject-accordion .table th {
+    background-color: #444;
+    color: #f9f9f9;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#subject-accordion .table tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+#subject-accordion .table tr:hover {
+    background-color: #f0f0f0;
+}
+
+
+#subject-accordion .table .dropdown-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    background-color: var(--white)
+}
+
+#subject-accordion .table .dropdown-suggestions {
+    position: absolute;
+    z-index: 1000;
+    background: #fefefe;
+    border: 1px solid #ccc;
+    max-height: 180px;
+    overflow-y: auto;
+    width: 100%;
+    display: none;
+}
+
+#subject-accordion .table .dropdown-input:focus + .dropdown-suggestions {
+    display: block;
+}
+
+#subject-accordion .table .dropdown-suggestions div {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+#subject-accordion .table .dropdown-suggestions div:hover {
+    background-color: #eaeaea;
+}
+#subject-accordion .save-button-container {
+  text-align: center;
+}
+#delete-option {
+  font-size: small;
+}
+#enable-option {
+  font-size: small;
+}
+#subject-duration {
+  font-size: 12px;
+  color: var(--text-dark);
+  margin-top: 5px;
+}
+
+/* Timetable table */
+.timetable {
+  overflow-x: auto;
+}
+
+.timetable-slot.assigned {
+  background-color: var(--info);
+  color: var(--black);
+  font-weight: bold;
+}
+.popup-content { 
+  overflow-y: auto;
+}
+
+.individual-year-list.active::before {
+  content: "";
+  position: absolute;
+  left: 0; /* Adjust as per spacing needs */
+  top: 0;
+  width: 5px; /* Width of the vertical line */
+  height: 100%; /* Full height of the card */
+  background-color: var(--portal-color); /* Line color */
+  border-top-left-radius: 10px; /* Match the card's top-left corner */
+  border-bottom-left-radius: 10px; /* Match the card's bottom-left corner */
+  z-index: 1; /* Ensure it appears above the background */
+}
+.individual-year-list.active {
+  transform: scale(1.02);
+}
+.individual-year-list {
+  position: relative;
+  cursor: pointer;
+}
+.individual-year-list.active::before {
+  content: "";
+  position: absolute;
+  left: 0; /* Adjust as per spacing needs */
+  top: 0;
+  width: 5px; /* Width of the vertical line */
+  height: 100%; /* Full height of the card */
+  background-color: var(--portal-color); /* Line color */
+  border-top-left-radius: 10px; /* Match the card's top-left corner */
+  border-bottom-left-radius: 10px; /* Match the card's bottom-left corner */
+  z-index: 1; /* Ensure it appears above the background */
+}
+.individual-year-list.active {
+  transform: scale(1.02);
+}
+.individual-year-list {
+  position: relative;
+  cursor: pointer;
+}
+
+
+.timetable-slot:hover {
+  background-color: var(--secondary);
+  cursor: pointer;
+}
+#year-list {
+  height: 70%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: var(--portal-color) #f0f0f000;
+}
+#subject-list {
+  height: 60%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: var(--portal-color) #f0f0f000;
+}
+
+
+
+
+.added-slots-lists {
+  position: relative;
+  overflow: hidden;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.delete-icon img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.added-slots-lists:hover .delete-icon {
+  opacity: 1;
+}
+
+.individual-subject-list.active::before {
+  content: "";
+  position: absolute;
+  left: 0; /* Adjust as per spacing needs */
+  top: 0;
+  width: 5px; /* Width of the vertical line */
+  height: 100%; /* Full height of the card */
+  background-color: var(--portal-color); /* Line color */
+  border-top-left-radius: 10px; /* Match the card's top-left corner */
+  border-bottom-left-radius: 10px; /* Match the card's bottom-left corner */
+  z-index: 1; /* Ensure it appears above the background */
+}
+.individual-subject-list.active {
+  transform: scale(1.02);
+}
+.individual-subject-list {
+  position: relative;
+  cursor: pointer;
+  height: 70%;
+  /* overflow-y: auto; */
+  scroll-behavior: smooth;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: var(--portal-color) #f0f0f000;
+}
+.main-content-card.addlist
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+
+}
+ 
+ 
+ 

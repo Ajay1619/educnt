@@ -1,0 +1,166 @@
+.calendar {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: var(--semi-transparent-white);
+}
+
+.day-name {
+  background: var(--black);
+  color: #fff;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.calendar-day {
+  background: #fff;
+  padding: 1rem;
+  min-height: 110px;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.calendar-day.dragover {
+  background: #d1f7c4;
+}
+
+.event {
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+  background: var(--semi-transparent-white);
+  color: var(--black);
+  border-radius: 4px;
+  cursor: grab;
+}
+
+/* Make close button visible on hover for all events (cloned and original) */
+.event:hover .close-button {
+  display: block;
+}
+
+.close-button {
+  color: red;
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  position: absolute; /* Position it absolutely inside the event */
+  top: 30%; /* Vertically center the button */
+  right: 1px; /* Distance from the right edge */
+  transform: translateY(
+    -50%
+  ); /* Adjust the vertical position to truly center it */
+  font-size: 18px; /* Font size for the button */
+}
+.ellipsis-text {
+  width: 300px; /* Set to match your desired column width */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block; /* Required for ellipsis to work */
+  cursor: default;
+
+}
+/* Apply a standard size to all cloned events */
+.cloned_events {
+  padding: 10px; /* Added padding for a consistent look */
+  position: relative; /* Make sure the cloned event container has position relative */
+  width: 140px; /* Set a fixed width for cloned events */
+  font-size: 12px; /* Reduced font size for cloned events */
+  overflow: hidden; /* Hide overflow if content is too large */
+}
+
+/* Hover effect on the cloned events */
+.cloned_events:hover {
+  opacity: 0.8; /* Example: Fade effect on hover */
+}
+
+/* Ensure the close button is visible when hovering over the cloned event */
+.cloned_events:hover .close-button {
+  display: block;
+}
+
+/* Add a bullet point before the event name */
+.cloned_events .event-name::before {
+  content: "* "; /* Adds a star bullet before the event name */
+  font-size: 16px; /* Font size of the bullet point */
+  color: black; /* Color of the bullet point */
+}
+.holiday {
+  background-color: var(--error);
+  color: var(--error-dark);
+  font-weight: bold;
+}
+.custom-context-menu {
+    position: absolute;
+    background:var(--white);
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    padding: 0;
+    width: 150px;
+    border-radius: 4px;
+}
+
+.custom-context-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-context-menu li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.custom-context-menu li:hover {
+    background: var(--hover-primary);
+    color: #333;
+}
+.event-label {
+  background-color: rgb(176, 170, 255);
+  font-size: 12px;
+  padding: 2px;
+  margin-top: 5px;
+  border-radius: 3px;
+  display: block;
+  text-align: center;
+}
+
+.more-event-labels{
+  font-size: 12px;
+}
+.popup-image {
+  width: 100%;
+  max-width: 400px;
+}
+#popup-cont{
+  padding: 0%;
+}
+#alert-pop{
+  width: 90%;
+}
+#dropzone{
+  margin: 10px;
+}
+#event-table-preview{
+  margin-top: 20px;
+  padding: 20px;
+}
+#popup-cont{
+  overflow-y: auto;
+}

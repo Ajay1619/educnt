@@ -1,0 +1,114 @@
+/* Import base styles */
+@import url("base/colors.css");
+@import url("base/reset.css");
+@import url("base/typography.css");
+
+/* Import component styles */
+@import url("components/badges.css");
+@import url("components/breadcrumbs.css");
+@import url("components/buttons.css");
+@import url("components/forms.css");
+@import url("components/cards.css");
+@import url("components/popup.css");
+@import url("components/table.css");
+@import url("components/toast.css");
+@import url("components/tabs.css");
+@import url("components/accordians.css");
+@import url("components/animation.css");
+@import url("components/print_button.css");
+@import url("components/tooltips.css");
+@import url("components/loading.css");
+@import url("components/component_loading.css");
+@import url("components/dropdown_loading.css");
+@import url("components/sidebar.css");
+@import url("components/topbar.css");
+@import url("components/footer.css");
+@import url("components/notification_bar.css");
+@import url("components/list.css");
+@import url("components/action_box.css");
+
+/* Import layout styles */
+@import url("layout/flex.css");
+@import url("layout/footer.css");
+@import url("layout/grid.css");
+
+/* Import utility styles */
+@import url("utilities/align.css");
+@import url("utilities/spacing-utilities.css");
+@import url("utilities/visibility.css");
+
+.full-width {
+  width: 100%;
+}
+.half-width {
+  width: 50%;
+}
+
+.section-header-title {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 15px;
+  position: relative; /* To position the vertical line */
+}
+
+.section-header-title.text-left::before {
+  content: "";
+  position: absolute;
+  left: -10px; /* Adjust as per spacing needs */
+  top: 0;
+  width: 5px; /* Width of the vertical line */
+  height: 100%; /* Full height of the title */
+  background-color: var(--portal-color); /* Line color */
+}
+
+.section-header-title.text-right::after {
+  content: "";
+  position: absolute;
+  right: -10px; /* Adjust for right alignment */
+  top: 0;
+  width: 5px; /* Width of the vertical line */
+  height: 100%; /* Full height of the title */
+  background-color: var(--portal-color); /* Line color */
+}
+
+.scrollable-container {
+  max-height: 300px; /* Set the desired height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px; /* Prevent content from being cut off */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: var(--portal-color) #f0f0f000; /* For Firefox */
+}
+
+.scrollable-container::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background: #ccc; /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background: #f0f0f000; /* Scrollbar track color */
+}
+
+.title-value-section {
+  padding: 20px 0;
+  text-align: left;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-light);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-top: 5px;
+  transition: color 0.3s ease;
+}

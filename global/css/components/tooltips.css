@@ -1,0 +1,125 @@
+/* Base styles for the tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Tooltip text styling - hidden by default */
+.tooltip .tooltip-text {
+  visibility: hidden; /* Start hidden */
+  width: 200px;
+  background-color: var(--black); /* Black background */
+  color: var(--white); /* White text */
+  text-align: center;
+  padding: 8px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0; /* Start with opacity 0 */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Transition effects */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltip header */
+.tooltip .tooltip-text strong {
+  font-size: 16px;
+  font-weight: bold; /* Make the header bold */
+  display: block; /* Display as block to separate from description */
+}
+
+/* Tooltip description */
+.tooltip .tooltip-text div {
+  font-size: 12px; /* Smaller font for the description */
+  color: rgba(255, 255, 255, 0.8); /* Slightly lighter color for description */
+}
+
+/* Tooltip positioning for top */
+.tooltip-top .tooltip-text {
+  bottom: 100%; /* Position above the element */
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+/* Tooltip positioning for bottom */
+.tooltip-bottom .tooltip-text {
+  top: 100%; /* Position below the element */
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+}
+
+/* Tooltip positioning for left */
+.tooltip-left .tooltip-text {
+  top: 50%;
+  right: 100%; /* Position to the left of the element */
+  transform: translateY(-50%) translateX(-8px);
+}
+
+/* Tooltip positioning for right */
+.tooltip-right .tooltip-text {
+  top: 50%;
+  left: 100%; /* Position to the right of the element */
+  transform: translateY(-50%) translateX(8px);
+}
+
+/* Tooltip arrow styling */
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  border-width: 6px;
+  border-style: solid;
+}
+
+/* Arrow for top (points down) */
+.tooltip-top .tooltip-text::after {
+  bottom: -11px; /* Position below the tooltip */
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  border-color: transparent transparent black transparent; /* Arrow pointing down */
+}
+
+/* Arrow for bottom (points up) */
+/* Arrow for bottom (points up) */
+.tooltip-bottom .tooltip-text::after {
+  top: -11px; /* Position above the tooltip */
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg); /* Rotate the arrow */
+  border-color: black transparent transparent transparent; /* Arrow pointing up */
+}
+
+/* Arrow for left (points right) */
+.tooltip-left .tooltip-text::after {
+  top: 50%;
+  right: -11px; /* Position to the right of the tooltip */
+  transform: translateY(-50%) rotate(180deg);
+  border-color: transparent transparent transparent black; /* Arrow pointing right */
+}
+
+/* Arrow for right (points left) */
+.tooltip-right .tooltip-text::after {
+  top: 50%;
+  left: -11px; /* Position to the left of the tooltip */
+  transform: translateY(-50%);
+  border-color: transparent black transparent transparent; /* Arrow pointing left */
+}
+
+/* Show tooltip on hover */
+.tooltip:hover .tooltip-text {
+  visibility: visible; /* Set visibility to visible */
+  opacity: 1; /* Fade in */
+}
+.tooltip-popup {
+  position: absolute; background-color: #f0fff0; border: 2px solid #66cc66; padding: 8px;
+  border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 128, 0, 0.2); z-index: 1000;
+  font-size: 14px; color: #006600;
+}
+.tooltip-popup ul { list-style: none; padding: 0; margin: 0; }
+.tooltip-popup li {
+  padding: 6px 10px; cursor: pointer; border-radius: 5px; transition: all 0.3s ease;
+  background-color: #e6ffe6; margin: 3px 0;
+}
+.tooltip-popup li:hover { background-color: #ccffcc; transform: translateX(5px); color: #003300; }
+.tooltip-popup::before {
+  content: ''; position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+  border: 5px solid transparent; border-bottom-color: #66cc66;
+}

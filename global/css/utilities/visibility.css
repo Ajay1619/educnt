@@ -1,0 +1,129 @@
+/* Visibility utilities */
+/* Display Utilities */
+
+/* Display - None */
+.d-none {
+  display: none !important;
+}
+
+/* Display - Block */
+.d-block {
+  display: block !important;
+}
+
+/* Display - Inline */
+.d-inline {
+  display: inline !important;
+}
+
+/* Display - Inline Block */
+.d-inline-block {
+  display: inline-block !important;
+}
+
+/* Display - Flex */
+.d-flex {
+  display: flex !important;
+}
+
+/* Display - Inline Flex */
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+/* Display - Grid */
+.d-grid {
+  display: grid !important;
+}
+
+/* Display - Inline Grid */
+.d-inline-grid {
+  display: inline-grid !important;
+}
+
+/* Visibility Utilities */
+
+/* Visibility - Hidden */
+.visibility-hidden {
+  visibility: hidden;
+}
+
+/* Visibility - Visible */
+.visibility-visible {
+  visibility: visible;
+}
+
+/* Screen Reader Utilities */
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Screen Reader Only - Focusable */
+.sr-only-focusable {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+/* Overflow Utilities */
+
+/* Overflow - Auto */
+.overflow-auto {
+  overflow: auto;
+}
+
+/* Overflow - Hidden */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Overflow - Scroll */
+.overflow-scroll {
+  overflow: scroll;
+}
+
+/* Overflow - Visible */
+.overflow-visible {
+  overflow: visible;
+}
+
+.white-background {
+  background-color: var(--white);
+}
+
+.black-background {
+  background-color: var(--black);
+}
+
+.dark-background {
+  background-color: var(--background-dark);
+}
+
+.light-background {
+  background: var(--background-light);
+}

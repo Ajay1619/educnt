@@ -1,0 +1,78 @@
+#delete-option {
+  font-size: small;
+}
+#enable-option {
+  font-size: small;
+}
+#subject-duration {
+  font-size: 12px;
+  color: var(--text-dark);
+  margin-top: 5px;
+}
+
+/* Timetable table */
+.timetable {
+  overflow-x: auto;
+}
+
+.timetable-slot.assigned {
+  background-color: var(--info);
+  color: var(--black);
+  font-weight: bold;
+}
+
+.timetable-slot:hover {
+  background-color: var(--secondary);
+  cursor: pointer;
+}
+#subject-list {
+  height: 75%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: var(--portal-color) #f0f0f000;
+}
+.individual-subject-list {
+  position: relative;
+  cursor: pointer;
+}
+
+.individual-subject-list.active::before {
+  content: "";
+  position: absolute;
+  left: 0; /* Adjust as per spacing needs */
+  top: 0;
+  width: 5px; /* Width of the vertical line */
+  height: 100%; /* Full height of the card */
+  background-color: var(--portal-color); /* Line color */
+  border-top-left-radius: 10px; /* Match the card's top-left corner */
+  border-bottom-left-radius: 10px; /* Match the card's bottom-left corner */
+  z-index: 1; /* Ensure it appears above the background */
+}
+.individual-subject-list.active {
+  transform: scale(1.02);
+}
+
+.added-slots-lists {
+  position: relative;
+  overflow: hidden;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.delete-icon img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.added-slots-lists:hover .delete-icon {
+  opacity: 1;
+}

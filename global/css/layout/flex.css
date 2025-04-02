@@ -1,0 +1,176 @@
+/* Flexbox utilities */
+/* Flexbox Layout Utilities */
+
+/* Flex Container */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+}
+
+/* Flex Direction */
+.flex-row {
+  flex-direction: row; /* Horizontal layout (default) */
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse; /* Reverse horizontal layout */
+}
+
+.flex-column {
+  flex-direction: column; /* Vertical layout */
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse; /* Reverse vertical layout */
+}
+
+/* Justify Content */
+.justify-start {
+  justify-content: flex-start; /* Align items at the start */
+}
+
+.justify-center {
+  justify-content: center; /* Align items at the center */
+}
+
+.justify-end {
+  justify-content: flex-end; /* Align items at the end */
+}
+
+.justify-between {
+  justify-content: space-between; /* Distribute items evenly */
+}
+
+.justify-around {
+  justify-content: space-around; /* Distribute items with space around */
+}
+
+.justify-evenly {
+  justify-content: space-evenly; /* Distribute items with equal space around */
+}
+
+/* Align Items */
+.align-start {
+  align-items: flex-start; /* Align items at the start */
+}
+
+.align-center {
+  align-items: center; /* Align items at the center */
+}
+
+.align-end {
+  align-items: flex-end; /* Align items at the end */
+}
+
+.align-baseline {
+  align-items: baseline; /* Align items along their baseline */
+}
+
+.align-stretch {
+  align-items: stretch; /* Stretch items to fill the container (default) */
+}
+
+/* Align Content */
+.align-content-start {
+  align-content: flex-start; /* Align lines at the start */
+}
+
+.align-content-center {
+  align-content: center; /* Align lines at the center */
+}
+
+.align-content-end {
+  align-content: flex-end; /* Align lines at the end */
+}
+
+.align-content-between {
+  align-content: space-between; /* Distribute lines evenly */
+}
+
+.align-content-around {
+  align-content: space-around; /* Distribute lines with space around */
+}
+
+.align-content-evenly {
+  align-content: space-evenly; /* Distribute lines with equal space around */
+}
+
+/* Align Self */
+.align-self-auto {
+  align-self: auto; /* Default alignment (stretch) */
+}
+
+.align-self-start {
+  align-self: flex-start; /* Align item at the start */
+}
+
+.align-self-center {
+  align-self: center; /* Align item at the center */
+}
+
+.align-self-end {
+  align-self: flex-end; /* Align item at the end */
+}
+
+.align-self-baseline {
+  align-self: baseline; /* Align item along the baseline */
+}
+
+.align-self-stretch {
+  align-self: stretch; /* Stretch item to fill the container */
+}
+
+/* Flex Grow and Shrink */
+.flex-grow-0 {
+  flex-grow: 0; /* Do not grow */
+}
+
+.flex-grow-1 {
+  flex-grow: 1; /* Grow to fill available space */
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0; /* Do not shrink */
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1; /* Shrink if necessary */
+}
+
+/* Flex Basis */
+.flex-basis-auto {
+  flex-basis: auto; /* Default size */
+}
+
+.flex-basis-0 {
+  flex-basis: 0; /* Zero size */
+}
+
+.flex-basis-1 {
+  flex-basis: 100px; /* Fixed size (example) */
+}
+
+/* Flex Align Content */
+.align-content-start {
+  align-content: flex-start;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.align-content-end {
+  align-content: flex-end;
+}
+
+.align-content-space-between {
+  align-content: space-between;
+}
+
+.align-content-space-around {
+  align-content: space-around;
+}
+
+.align-content-space-evenly {
+  align-content: space-evenly;
+}

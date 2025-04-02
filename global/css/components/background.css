@@ -1,0 +1,245 @@
+/* Base Styles */
+#background {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary);
+  position: relative;
+}
+
+#contents {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px; /* Space between edges and content */
+  z-index: 1;
+}
+
+#contents img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  z-index: -1; /* Image behind the content */
+}
+
+#contents .left-content,
+#contents .right-content {
+  position: relative;
+  z-index: 2;
+}
+
+#contents .left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+#contents .right-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+#breadcrumb {
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+/* 4K and Larger Screens */
+@media (min-width: 2560px) {
+  #background {
+    height: 20vw;
+  }
+
+  #background img {
+    height: 20vw;
+  }
+  #page-title {
+    font-size: 5rem;
+  }
+  .title-description {
+    font-size: 2rem;
+  }
+  #breadcrumb {
+    font-size: 2rem;
+  }
+  button {
+    width: 200px;
+    height: 75px;
+    font-size: 1.5rem;
+    margin: 0px 30px;
+  }
+}
+
+/* Laptop L (1440px - 2559px) */
+@media (min-width: 1440px) and (max-width: 2559px) {
+  #background {
+    height: 25vw;
+  }
+
+  #background img {
+    height: 25vw;
+  }
+  #page-title {
+    font-size: 3.5rem;
+  }
+  .title-description {
+    font-size: 1.5rem;
+  }
+  #breadcrumb {
+    font-size: 1.5rem;
+  }
+  button {
+    width: 150px;
+    height: 50px;
+    font-size: 1.2rem;
+    margin: 0px 30px;
+  }
+}
+
+/* Laptop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  #background {
+    height: 30vw;
+  }
+
+  #background img {
+    height: 30vw;
+  }
+  #page-title {
+    font-size: 3rem;
+  }
+  .title-description {
+    font-size: 1.2rem;
+  }
+  #breadcrumb {
+    font-size: 1.2rem;
+  }
+  button {
+    width: 130px;
+    height: 45px;
+    font-size: 1rem;
+    margin: 0px 20px;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #background {
+    height: 35vw;
+  }
+
+  #background img {
+    height: 35vw;
+  }
+  #page-title {
+    font-size: 2.5rem;
+  }
+  .title-description {
+    font-size: 1.1rem;
+  }
+  #breadcrumb {
+    font-size: 1rem;
+  }
+  button {
+    width: 120px;
+    height: 40px;
+    font-size: 0.9rem;
+    margin: 0px 10px;
+  }
+}
+
+/* Mobile L (425px - 767px) */
+@media (min-width: 425px) and (max-width: 767px) {
+  #background {
+    height: 70vw;
+  }
+
+  #background img {
+    height: 70vw;
+  }
+  #contents {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #page-title {
+    font-size: 2.2rem;
+  }
+  .title-description {
+    font-size: 1rem;
+  }
+  button {
+    width: 100px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+  #breadcrumb {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile M (375px - 424px) */
+@media (min-width: 375px) and (max-width: 424px) {
+  #background {
+    height: 70vw;
+  }
+
+  #background img {
+    height: 70vw;
+  }
+  #contents {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #page-title {
+    font-size: 2rem;
+  }
+  .title-description {
+    font-size: 0.9rem;
+  }
+  button {
+    width: 90px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile S (max-width: 374px) */
+@media (max-width: 374px) {
+  #background {
+    height: 80vw;
+  }
+
+  #background img {
+    height: 80vw;
+  }
+  #contents {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #page-title {
+    font-size: 1.8rem;
+  }
+  .title-description {
+    font-size: 0.8rem;
+  }
+  button {
+    width: 75px;
+    height: 25px;
+    font-size: 0.7rem;
+  }
+}

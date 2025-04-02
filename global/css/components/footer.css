@@ -1,0 +1,20 @@
+.footer {
+  background-color: var(--white);
+  padding: 1px;
+  text-align: center;
+  //box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-software-name {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.footer-college-name {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.footer-copyright {
+  font-size: 0.3rem;
+}

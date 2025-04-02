@@ -1,0 +1,568 @@
+/* Base Form Styles */
+form {
+  background-color: var(--background-light);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* Input Fields */
+.input-container {
+  position: relative;
+  margin-top: 10px;
+}
+
+.input-container input,
+.input-container textarea,
+.input-container select,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px; /* Adjust padding for consistency */
+  border-radius: 8px;
+  border: 1px solid var(--secondary-dark);
+  background-color: var(--background-light);
+  color: var(--text-color);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-container textarea {
+  min-height: 100px; /* Maintain minimum height for textareas */
+}
+
+select {
+  cursor: pointer;
+}
+
+/* Focus Styles */
+.input-container input:focus,
+.input-container textarea:focus,
+.input-container select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  border-color: #000000;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Floating Label Styles */
+.input-label {
+  position: absolute;
+  top: 30%;
+  left: 12px;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.bulmaCalender {
+  background-color: #000000;
+}
+.input-container {
+  position: relative; /* Required for absolute positioning of label */
+}
+
+.input-container.date .input-wrapper {
+  position: relative; /* Ensure the wrapper is positioned relative */
+}
+
+.input-container.date .bulmaCalender {
+  padding: 12px 10px; /* Adjust padding as needed */
+  cursor: pointer;
+}
+
+.input-container.date .input-label {
+  position: absolute; /* Position label absolutely */
+  top: -10px; /* Center vertically */
+  left: 10px; /* Align with input */
+  transition: top 0.2s ease, font-size 0.2s ease; /* Smooth transition */
+  pointer-events: none; /* Prevent label from interfering with input clicks */
+  font-size: 0.85rem; /* Default size */
+  font-weight: bold;
+  background-color: var(--background-light);
+}
+
+.input-container select:focus + .input-label,
+.input-container select:not(:placeholder-shown) + .input-label,
+.input-container input:focus + .input-label,
+.input-container input:not(:placeholder-shown) + .input-label,
+.input-container textarea:focus + .input-label,
+.input-container textarea:not(:placeholder-shown) + .input-label {
+  top: -10px; /* Merged position */
+  left: 10px;
+  background-color: var(--background-light);
+  font-size: 0.85rem;
+  padding: 0 5px;
+  color: var(--black); /* Default color for labels */
+}
+
+/* Success, Error, Warning, and Info States */
+input[type="text"].success,
+input[type="password"].success,
+input[type="email"].success,
+input[type="number"].success,
+textarea.success,
+select.success {
+  border-color: var(--success-dark);
+  background-color: var(--background-light); /* Light green background */
+}
+
+input[type="text"].error,
+input[type="password"].error,
+input[type="email"].error,
+input[type="number"].error,
+textarea.error,
+select.error {
+  border-color: var(--error-dark);
+  background-color: rgba(255, 99, 71, 0.1); /* Light red background */
+}
+
+input[type="text"].warning,
+input[type="password"].warning,
+input[type="email"].warning,
+input[type="number"].warning,
+textarea.warning,
+select.warning {
+  border-color: var(--warning-dark);
+  background-color: rgba(255, 215, 0, 0.1); /* Light yellow background */
+}
+
+input[type="text"].info,
+input[type="password"].info,
+input[type="email"].info,
+input[type="number"].info,
+textarea.info,
+select.info {
+  border-color: var(--info-dark);
+  background-color: rgba(173, 216, 230, 0.1); /* Light blue background */
+}
+
+/* Autocomplete */
+input[type="text"][autocomplete] {
+  /* Additional styles for autocomplete input fields */
+}
+
+input[type="text"][autocomplete]:focus {
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+input[type="text"][autocomplete]::-webkit-autofill {
+  background-color: var(--gray-light) !important;
+  color: var(--text-color);
+}
+
+input[type="text"][autocomplete]::-webkit-autofill::first-line {
+  font-size: 16px;
+}
+
+/* Checkboxes and Radio Buttons */
+.input-group {
+  display: flex;
+  flex-direction: row; /* Aligns radio buttons in a single line */
+  gap: 20px; /* Adds spacing between them */
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Ensures responsiveness on small screens */
+  justify-content: center;
+}
+
+.modern-checkbox,
+.modern-radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.modern-checkbox input,
+.modern-radio input {
+  display: none;
+}
+
+.modern-checkbox span,
+.modern-radio span {
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border: 2px solid var(--light-border);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.modern-checkbox span {
+  border-radius: 6px; /* Square shape for checkboxes */
+}
+
+.modern-checkbox span::after,
+.modern-radio span::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: var(--portal-color);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.modern-checkbox span::after {
+  border-radius: 3px; /* Square shape for checkbox tick */
+}
+
+.modern-checkbox input:checked + span::after,
+.modern-radio input:checked + span::after {
+  transform: scale(1);
+}
+
+.modern-checkbox span:hover,
+.modern-radio span:hover {
+  background: var(--black);
+  border-color: var(--black);
+}
+
+.modern-checkbox input:checked + span:hover,
+.modern-radio input:checked + span:hover {
+  background: var(--portal-color);
+  border-color: var(--portal-color);
+}
+
+.modern-label {
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.modern-checkbox:hover .modern-label,
+.modern-radio:hover .modern-label {
+  color: var(--black);
+}
+
+/* Accessibility */
+input[aria-required="true"],
+textarea[aria-required="true"] {
+  border-color: var(--secondary-dark); /* Highlight required fields */
+}
+
+.dropdown-suggestions {
+  position: absolute; /* Position relative to the input */
+  background-color: #fff; /* White background for suggestions */
+  border: 1px solid #ccc; /* Light border around the suggestions */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-height: 300px; /* Limit height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  z-index: 900; /* Ensure it's above other elements */
+  width: calc(100% - 2px); /* Full width of input minus border */
+  top: calc(100% - 0px); /* Adjust the top distance for dropdown suggestions */
+  /* Alternatively, use margin-top: 2px; */
+  display: none; /* Hidden by default */
+}
+
+.dropdown-container {
+  position: relative; /* To position the arrow inside the container */
+  width: 100%; /* Set full width for the container */
+}
+
+.dropdown-input {
+  width: 100%; /* Full width for the input */
+  padding-right: 30px; /* Space for the arrow icon */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  position: absolute; /* Position relative to the input */
+  top: 70%; /* Vertically center the arrow */
+  right: 10px; /* Align arrow to the right */
+  transform: translateY(-100%); /* Center the arrow vertically */
+  pointer-events: none; /* Ignore clicks on the arrow */
+  font-size: 20px;
+  font-weight: bolder;
+  color: #888;
+}
+
+.autocomplete-suggestions {
+  position: absolute; /* Position relative to the input */
+  background-color: #fff; /* White background for suggestions */
+  border: 1px solid #ccc; /* Light border around the suggestions */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-height: 300px; /* Limit height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  z-index: 900; /* Ensure it's above other elements */
+  width: calc(100% - 2px); /* Full width of input minus border */
+  top: calc(
+    100% - 0px
+  ); /* Adjust the top distance for autocomplete suggestions */
+  /* Alternatively, use margin-top: 2px; */
+  display: none; /* Hidden by default */
+}
+
+.autocomplete-container {
+  position: relative; /* To position the arrow inside the container */
+  width: 100%; /* Set full width for the container */
+}
+
+.autocomplete-input {
+  width: 100%; /* Full width for the input */
+  padding-right: 30px; /* Space for the arrow icon */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.autocomplete-arrow {
+  position: absolute; /* Position relative to the input */
+  top: 70%; /* Vertically center the arrow */
+  right: 10px; /* Align arrow to the right */
+  transform: translateY(-100%); /* Center the arrow vertically */
+  pointer-events: none; /* Ignore clicks on the arrow */
+  font-size: 20px;
+  font-weight: bolder;
+  color: #888;
+}
+
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between; /* Space between title and code */
+  padding: 12px 16px; /* Add some padding for comfort */
+  cursor: pointer;
+  border-bottom: 1px solid #eee; /* Separator for suggestions */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+.suggestion-item.active {
+  background-color: #e0e0e0;
+  color: #000;
+}
+.suggestion-item:hover {
+  background-color: #e9e9e9; /* Slightly darker on hover */
+}
+
+.suggestion-item:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+.select,
+.auto {
+  width: 100%; /* Make input fields full width */
+  padding: 10px; /* Add padding to input fields */
+  border: 1px solid #ccc; /* Light border for input fields */
+  border-radius: 4px; /* Slightly rounded corners */
+  transition: border-color 0.3s; /* Smooth transition for focus */
+}
+
+.select:focus,
+.auto:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.suggestion-title {
+  font-weight: bold; /* Bold title for better visibility */
+  font-size: 1rem; /* Slightly larger font size */
+}
+
+.suggestion-code {
+  color: #888; /* Subtle color for the ID */
+  font-size: 0.9rem; /* Slightly smaller font size */
+  margin-left: 10px; /* Space between title and code */
+}
+
+input[type="text"] + .is-hidden {
+  box-shadow: none;
+}
+
+.chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+.chip .chip-close-btn {
+  margin-left: 8px;
+  font-size: 1.5em;
+
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Wrapper for upload section */
+.upload-wrapper {
+  text-align: center;
+}
+
+/* Label styling */
+.upload-instruction {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Dropzone styling */
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  padding: 20px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  color: #555;
+}
+
+.dropzone:hover {
+  border-color: var(--portal-color);
+  background-color: var(--white);
+}
+
+.dropzone.dragover {
+  border-color: var(--portal-color);
+  background-color: var(--white);
+}
+
+.browse-text {
+  color: var(--portal-color);
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.file-input {
+  display: none;
+}
+/* Preview container */
+.preview-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: auto; /* Allow full width */
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+}
+
+/* Preview card styling */
+.preview-card {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: fit-content; /* Make card width fit content */
+  min-width: 100px; /* Optional: Set a minimum width for better readability */
+}
+
+.preview-card img {
+  height: 40px;
+  border-radius: 3px;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
+.preview-card span {
+  flex-grow: 1;
+  text-align: left;
+  color: #333;
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Container styling */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 45px; /* Reduced width */
+  height: 25px; /* Reduced height */
+  border-radius: 20px; /* Adjusted to match new height */
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.8), 0 3px 6px rgba(0, 0, 0, 0.4); /* Adjusted shadow */
+  transition: background-color 0.3s ease;
+}
+
+/* Hidden checkbox input */
+.toggle-input {
+  display: none;
+}
+
+/* Toggle button label styling */
+.toggle-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px; /* Adjusted to match new height */
+  cursor: pointer;
+  position: relative;
+}
+
+/* Inner circle */
+.toggle-inner {
+  position: absolute;
+  top: 2px; /* Adjusted for smaller size */
+  left: 2px; /* Adjusted for smaller size */
+  width: 20px; /* Reduced width */
+  height: 20px; /* Reduced height */
+  background-color: var(--white); /* White circle */
+  border-radius: 50%;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Adjusted shadow */
+  transition: left 0.3s ease;
+}
+
+/* Active state: green background for toggle-switch and move circle to the right */
+.toggle-input:checked + .toggle-label {
+  background-color: var(--success-light);
+}
+
+/* Additional background color change for toggle-switch container */
+.toggle-input:checked + .toggle-label .toggle-inner {
+  left: calc(100% - 23px); /* Adjusted to stay within container on the right */
+}
+
+.toggle-input:checked ~ .toggle-switch {
+  background-color: var(
+    --success-dark
+  ); /* Green background for entire switch */
+}

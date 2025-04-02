@@ -1,0 +1,76 @@
+/* Tabs Container */
+.tabs {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Individual Tab */
+.tab {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 1; /* Ensure tabs remain above the background */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.tab:hover {
+  color: var(--black);
+  transform: translateY(-2px);
+}
+
+/* Background Slider */
+.tabs::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: var(--indicator-width, 0); /* Dynamic width of the active tab */
+  height: 100%; /* Full height for the background color */
+  background: var(--black); /* Active background color */
+  border-radius: 8px 8px 0 0;
+  z-index: 0; /* Behind tabs */
+  transform: translateX(
+    var(--indicator-position, 0)
+  ); /* Position dynamically */
+  transition: transform 0.4s ease, width 0.4s ease;
+}
+
+/* Bottom Line */
+.tabs::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Slightly below the tabs */
+  left: 0;
+  width: var(--indicator-width, 0); /* Matches the width of the active tab */
+  height: 4px;
+  background: var(--black); /* Same as the background color */
+  border-radius: 4px;
+  transform: translateX(
+    var(--indicator-position, 0)
+  ); /* Matches the active tab */
+  transition: transform 0.3s ease 0.1s, width 0.3s ease 0.1s; /* Delayed movement */
+  z-index: 1; /* Above the container but below the content */
+}
+
+/* Active Tab */
+.tab.active {
+  color: var(--white);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .tab {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  .tab-content {
+    font-size: 14px;
+  }
+}

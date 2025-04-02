@@ -1,0 +1,452 @@
+/* Disable page scroll when popup is active */
+.no-scroll {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* Overlay for the popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--darker-semi-transparent-bg-color);
+  backdrop-filter: blur(8px);
+  display: flex; /* Changed to flex for proper centering */
+  justify-content: center;
+  align-items: center;
+  z-index: 1002;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  padding: 20px; /* Add padding for smaller screens */
+}
+
+/* Alert Popup Container */
+.alert-popup {
+  position: relative;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh; /* Limit popup height */
+  /* overflow: hidden; Enable scrolling within the popup */
+  /* overflow-y: scroll; */
+}
+
+.popup-quotes {
+  font-size: 1rem;
+  color: var(--text-muted); /* Light color for the quote */
+  font-style: italic;
+  margin: 15px 0;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--background-light); /* Light background for quotes */
+}
+
+/* Close Button */
+.popup-close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* overflow-y: scroll; */
+}
+
+/* Close Button Hover Effect */
+.popup-close-btn:hover {
+  color: var(--error-dark); /* Change color on hover */
+}
+
+/* Popup Header */
+.popup-header {
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 15px;
+  text-align: center;
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--light-border);
+  /* overflow-y: scroll; */
+}
+
+/* Popup Content */
+.popup-content {
+  height: 100%;
+  /* margin-top: 500px; */
+  padding: 20px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  text-align: center;
+  /* overflow-y: auto; */
+}
+
+.popup-image {
+  width: 30%;
+}
+/* Popup Footer */
+.popup-footer {
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid var(--light-border);
+  /* overflow-y: scroll; */
+}
+
+/* Footer Button */
+.popup-footer .particulars {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* overflow-y: scroll; */
+}
+
+/* Overlay for the Error Popup */
+.error-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+  backdrop-filter: blur(5px);
+  z-index: 1003;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align at the top */
+  overflow: hidden;
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Error Popup Container */
+.error-popup {
+  position: relative;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 750px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
+  animation: slideDown 0.5s ease; /* Slide-down animation for the popup */
+}
+
+/* Error Header */
+.error-header {
+  background-color: var(--error-light); /* Red color for error header */
+  color: var(--white);
+  padding: 15px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-bottom: 1px solid var(--light-border);
+}
+
+/* Error Popup Content */
+.error-content {
+  padding: 20px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  text-align: center;
+  overflow-y: auto;
+  max-height: 6 0vh;
+}
+
+.error-popup-header {
+  margin-top: 40px;
+}
+
+/* Close Button */
+.error-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.error-close-btn:hover {
+  color: var(--text-muted); /* Change color on hover */
+}
+
+/* Error Footer */
+.error-footer {
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid var(--light-border);
+}
+
+/* Footer Button */
+.error-footer .dismiss-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--error-dark); /* Red button for dismiss */
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.error-footer .dismiss-btn:hover {
+  background-color: var(--error-light); /* Lighter red on hover */
+}
+.error-quotes {
+  font-size: 1rem;
+  color: var(--text-muted); /* Light color for the quote */
+  font-style: italic;
+  margin: 15px 0;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--background-light); /* Light background for quotes */
+}
+.error-popup.slide-up {
+  animation: slideUp 0.5s ease forwards;
+}
+
+/* Apply Fade-out Animation to Overlay */
+.error-popup-overlay.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+.warning-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+  backdrop-filter: blur(5px);
+  z-index: 1003;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align at the top */
+  overflow: hidden;
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* warning Popup Container */
+.warning-popup {
+  position: relative;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 750px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
+  animation: slideDown 0.5s ease; /* Slide-down animation for the popup */
+}
+
+/* warning Header */
+.warning-header {
+  background-color: var(--warning-light); /* Red color for warning header */
+  color: var(--white);
+  padding: 15px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-bottom: 1px solid var(--light-border);
+}
+
+/* warning Popup Content */
+.warning-content {
+  padding: 20px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  text-align: center;
+  overflow-y: auto;
+  max-height: 6 0vh;
+}
+
+.warning-popup-header {
+  margin-top: 40px;
+}
+
+/* Close Button */
+.warning-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.warning-close-btn:hover {
+  color: var(--text-muted); /* Change color on hover */
+}
+
+/* warning Footer */
+.warning-footer {
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid var(--light-border);
+}
+
+/* Footer Button */
+.warning-footer .dismiss-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--warning-dark); /* Red button for dismiss */
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.warning-footer .dismiss-btn:hover {
+  background-color: var(--warning-light); /* Lighter red on hover */
+}
+.warning-quotes {
+  font-size: 1rem;
+  color: var(--text-muted); /* Light color for the quote */
+  font-style: italic;
+  margin: 15px 0;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--background-light); /* Light background for quotes */
+}
+.warning-popup.slide-up {
+  animation: slideUp 0.5s ease forwards;
+}
+
+/* Apply Fade-out Animation to Overlay */
+.warning-popup-overlay.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+/* Fade-in Animation */
+
+.success-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+  backdrop-filter: blur(5px);
+  z-index: 1003;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align at the top */
+  overflow: hidden;
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* success Popup Container */
+.success-popup {
+  position: relative;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 750px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
+  animation: slideDown 0.5s ease; /* Slide-down animation for the popup */
+}
+
+/* success Header */
+.success-header {
+  background-color: var(--success-light); /* Red color for success header */
+  color: var(--white);
+  padding: 15px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-bottom: 1px solid var(--light-border);
+}
+
+/* success Popup Content */
+.success-content {
+  padding: 20px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  text-align: center;
+  overflow-y: auto;
+  max-height: 6 0vh;
+}
+
+.success-popup-header {
+  margin-top: 40px;
+}
+
+/* Close Button */
+.success-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.success-close-btn:hover {
+  color: var(--text-muted); /* Change color on hover */
+}
+
+/* success Footer */
+.success-footer {
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid var(--light-border);
+}
+
+/* Footer Button */
+.success-footer .dismiss-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--success-dark); /* Red button for dismiss */
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.success-footer .dismiss-btn:hover {
+  background-color: var(--success-light); /* Lighter red on hover */
+}
+.success-quotes {
+  font-size: 1rem;
+  color: var(--text-muted); /* Light color for the quote */
+  font-style: italic;
+  margin: 15px 0;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--background-light); /* Light background for quotes */
+}
+.success-popup.slide-up {
+  animation: slideUp 0.5s ease forwards;
+}
+
+/* Apply Fade-out Animation to Overlay */
+.success-popup-overlay.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+/* Fade-in Animation */

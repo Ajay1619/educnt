@@ -1,0 +1,44 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.list-item:hover {
+  transform: translateY(-2px);
+  background: var(--portal-color);
+  color: var(--white);
+}
+
+.list-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.list-badge {
+  font-size: 14px;
+  background: var(--portal-color);
+  color: var(--white);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+.list-badge:hover {
+  background: var(--portal-dark-color);
+}

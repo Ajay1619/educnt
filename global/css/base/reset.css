@@ -1,0 +1,225 @@
+/* CSS reset */
+/* Reset Box-Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dt,
+dd,
+figure,
+blockquote,
+pre,
+table,
+fieldset,
+input,
+button,
+textarea,
+legend {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set default font and line height */
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove quotes from blockquotes and figures */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* Remove table border spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove form field styling */
+input,
+button,
+textarea,
+select {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+/* Remove button styling */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+}
+
+/* Reset appearance of fieldset and legend */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  border: none;
+  padding: 0;
+}
+
+/* Remove default outline */
+:focus {
+  outline: none;
+}
+
+/* Ensure images and videos are responsive */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reset HTML5 elements */
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+figure,
+figcaption,
+address {
+  display: block;
+}
+
+/* Normalize form elements */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  line-height: normal;
+}
+
+/* Align form inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+/* Remove default appearance of form inputs */
+input[type="button"],
+input[type="submit"] {
+  background: none;
+  border: none;
+}
+
+/* Reset table styling */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Ensure all text is inheritable */
+body,
+input,
+button,
+textarea,
+select {
+  font-size: 100%;
+}
+main {
+  background: var(--background-light);
+
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+
+  display: block; /*  Ensures it behaves like a block element for layout */
+
+  border-radius: 15px 0px 0px 15px;
+
+  padding: 2% 1% 1% 2%;
+}
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin; /* For Firefox */
+z-index: 1; /* For Firefox */
+  scrollbar-color: var(--portal-color) #f0f0f000;
+}
+/* Extra large screens (2560px and above) */
+@media (min-width: 2560px) {
+  main {
+    margin: 100px 0px 0px 100px; /* Adjust as needed for larger screens */
+  }
+}
+
+/* Large screens (1440px to 2559px) */
+@media (min-width: 1440px) and (max-width: 2559px) {
+  main {
+    margin: 60px 0px 0px 60px; /* Adjust for large screens */
+  }
+}
+
+/* Medium screens (1024px to 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  main {
+    margin: 60px 0px 0px 60px; /* Adjust for medium screens */
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    margin: 60px 0px 0px 0px; /* Adjust for tablets */
+  }
+}
+
+/* Small devices (425px to 767px) */
+@media (min-width: 425px) and (max-width: 767px) {
+  main {
+    margin: 60px 0px 0px 0px; /* Adjust for small devices */
+  }
+}
+
+/* Extra small devices (375px to 424px) */
+@media (min-width: 375px) and (max-width: 424px) {
+  main {
+    margin: 60px 0px 0px 0px; /* Adjust for small devices */
+  }
+}
+
+/* Very small devices (below 374px) */
+@media (max-width: 374px) {
+  main {
+    margin: 60px 0px 0px 0px; /* Adjust for small devices */
+  }
+}

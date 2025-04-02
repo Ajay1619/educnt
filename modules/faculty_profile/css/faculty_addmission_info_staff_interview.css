@@ -1,0 +1,185 @@
+.staff_admission_container {
+  width: 100%;
+  background-color: var(--background-light);
+  padding: 20px;
+  box-shadow: 0 0 10px var(--gray-light);
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Stepper Styles */
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.step {
+  text-align: center;
+  width: 16%;
+  position: relative;
+}
+
+.stepper::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 7%;
+  width: 85%;
+  height: 5px;
+  background-color: var(--black);
+  z-index: 0;
+}
+
+.step i {
+  font-size: 1.5rem;
+  color: var(--black);
+  z-index: 1;
+  position: relative;
+  background-color: var(--white);
+  border-radius: 50%;
+  border: 2px solid var(--black);
+  padding-top: 8px;
+  width: 50px;
+  height: 50px;
+  line-height: 30px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.step.active i {
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+.step p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--black);
+}
+
+/* Tabs for subcategories */
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  color: var(--black);
+  border: 2px solid var(--background-light);
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 10px;
+  cursor: context-menu;
+}
+
+.tab-btn.active {
+  border-color: var(--primary-color); /* Border color change  */
+}
+
+/* Form Content */
+.step-content {
+  display: none;
+}
+
+.step-content.active {
+  display: block;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* .form-navigation {
+  display: flex;
+  justify-content: flex-end;
+} */
+
+/* .chip-container {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.chip span {
+  margin-right: 10px;
+}
+
+.chip i {
+  cursor: pointer;
+} */
+
+.file-preview {
+  display: flex;
+  width: 10%;
+  /* Adjust as needed */
+}
+.form-content {
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 70vh; /* Limit the height of the content area */
+  padding: 20px;
+}
+
+.profile-pic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.image-preview {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--portal-color);
+  overflow: hidden;
+  background-color: #f7f7f7;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-preview:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.image-preview__image {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.placeholder-text {
+  color: #777;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#profilePicInput {
+  display: none;
+}
